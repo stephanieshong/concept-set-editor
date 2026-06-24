@@ -101,6 +101,53 @@ DRAFT ──────────────► IN REVIEW ──────
 └──────────────────────┴────────────────────────────────────────┘
 ```
 
+# Concept Set Editor Layout
+
+| Metadata Panel (Collapsible) | Concept Set Visualization       |
+| ---------------------------- | ------------------------------- |
+| **Version Name***            | **Venn Diagram (Live Preview)** |
+| Based on: `v1` 🔒            |                                 |
+| **Rationale***               |                                 |
+| Scope Notes                  |                                 |
+| **Author***                  |                                 |
+| **Reviewers***               |                                 |
+| + Add Reviewer               |                                 |
+| Study ID                     |                                 |
+| **Actions**                  |                                 |
+| [Save Draft]                 |                                 |
+| [Submit for Review]          |                                 |
+
+---
+
+## Concept Hierarchy Diff Tree
+
+```text
+Diabetes mellitus                    ⬜ both
+├── Type 2 diabetes                  ⬜ both
+├── Insulin-dependent diabetes       🔵 [+ Add]
+└── Drug-induced diabetes            🟢 [- Remove]
+```
+
+### Search and Add Concepts
+
+```text
+🔍 Search to add new concept...
+```
+
+### Legend
+
+| Icon       | Meaning                                  |
+| ---------- | ---------------------------------------- |
+| ⬜          | Present in both concept sets             |
+| 🔵         | New concept added in current version     |
+| 🟢         | Concept removed from current version     |
+| 🔒         | Read-only / inherited from prior version |
+| [+ Add]    | Include concept in concept set           |
+| [- Remove] | Exclude concept from concept set         |
+
+```
+```
+
 - Metadata panel **collapses** to give full width to Venn + diff tree during editing
 - Venn diagram updates **live** as concepts are added/removed
 
@@ -134,9 +181,13 @@ Built from OMOP `concept_ancestor` table. Differences cluster under parent conce
 | ⬜ Neutral | In both versions | [- Remove from draft] |
 | 🟡 Amber | In both but a flag changed (e.g. includeDescendants toggled) | — |
 
-- **Search bar** at bottom: find and add concepts not present in either version
-- Each `[+ Add]` / `[- Remove]` click updates Venn instantly via clientside callback (no server round-trip)
 
+- Each `[+ Add]` / `[- Remove]` click updates Venn instantly via clientside callback (no server round-trip)
+### Search and Add Concepts
+
+```text
+🔍 Search to add new concept...
+```
 ---
 
 ## 4. Reviewer Workflow
