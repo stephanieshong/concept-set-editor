@@ -56,9 +56,9 @@ Supporting Services:
 ## Benefits of This Stack
 
 * Fully Python-based architecture
-* Excellent integration with OMOP vocabulary databases
+* Integration with OMOP vocabulary databases
 * Supports interactive concept hierarchy visualization
 * Scales to large concept sets through virtualized grids
-* Provides robust review and approval workflows
-* Easy deployment within institutional environments
-* Well-suited for OHDSI, AI-READI, and OMOP-based terminology management applications
+* Provides review and approval workflows of concept set edit and creation
+* Provide deployment within institutional environments
+* Suited for OHDSI and OMOP-based vocabulary/terminology management applications
