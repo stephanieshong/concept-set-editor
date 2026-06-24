@@ -52,6 +52,40 @@ Supporting Services:
 - Flask-Mail or smtplib for notifications
 - Plotly for analytics and visualizations
 ```
+## Required Python Packages
+
+| Package                              | Purpose                                                                                    |
+| ------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `dash` + `dash-bootstrap-components` | Web framework and UI layout/components                                                     |
+| `dash-cytoscape`                     | Concept hierarchy diff tree visualization                                                  |
+| `dash-ag-grid`                       | Large concept tables with virtual scrolling and filtering                                  |
+| `plotly`                             | Interactive Venn diagram visualization                                                     |
+| `sqlalchemy` + `alembic`             | Object-relational mapping (ORM) and database schema migrations                             |
+| `psycopg2-binary`                    | PostgreSQL database adapter (binary distribution avoids requiring a C compiler on Windows) |
+| `flask-caching`                      | Caches resolved concept sets to improve application performance                            |
+| `python-dotenv`                      | Loads configuration values from `.env` files into environment variables                    |
+| `flask-mail`                         | Sends reviewer notification emails                                                         |
+| `requests`                           | Retrieves concept set JSON documents from the Zenodo API                                   |
+| `orjson`                             | High-performance JSON serialization and deserialization for large concept sets             |
+
+### Installation
+
+```bash
+pip install \
+  dash \
+  dash-bootstrap-components \
+  dash-cytoscape \
+  dash-ag-grid \
+  plotly \
+  sqlalchemy \
+  alembic \
+  psycopg2-binary \
+  flask-caching \
+  python-dotenv \
+  flask-mail \
+  requests \
+  orjson
+```
 
 ## Benefits of This Stack
 
